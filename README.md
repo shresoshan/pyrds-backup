@@ -20,8 +20,8 @@ pip install pyrdsbackup
 ```python
 from pyrdsbackup.db import mssql
 
-# Initialize Credentials
-credentials = {
+# Initialize config
+config = {
     'server': 'rdsserver.amazon',
     'username': 'adminuser',
     'password': 'password',
@@ -31,8 +31,8 @@ credentials = {
 }
 
 # Test if the connection works. If returns True then backup is possible
-mssql.test(credentials)
+mssql.test(config)
 
 # Backup the database
-mssql.backup(credentials, 'database_name')
+mssql.backup(config, 'database_name')
 ```
